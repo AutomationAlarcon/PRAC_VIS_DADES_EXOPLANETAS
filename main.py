@@ -20,6 +20,7 @@ df1['molecules'] = df1['molecules'].astype('category')
 df1['mass_detection_type'] = df1['mass_detection_type'].astype('category')
 df1['star_name'] = df1['star_name'].astype('category')
 
+# Exoplanets classification
 #Subterran
 # (Mars-sized)
 # 0.1 — 0.5 ME or 0.4 — 0.8 RE,
