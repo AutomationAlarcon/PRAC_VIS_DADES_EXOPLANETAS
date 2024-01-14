@@ -75,13 +75,11 @@ def get_molecules_values():
     This method is to get a list with the molecules.
 
     returns:
-        A list of molecules.
+        A list of molecules values.
     """
     t = df1['molecules'].tolist()
     t_values = [i for i in dict(Counter(t)).values()]
     t_keys = list(dict(Counter(t)).keys())
-    print(t_values)
-    print(t_keys)
     mol = []
     for k in t_keys:
         if str(k) != 'nan':
@@ -143,6 +141,7 @@ filtered_df = df2[df2[['name', 'radius', 'orbital_period', 'mass', 'type_radius'
 print("Selection of the like-terran exoplanets")
 filtered_df = filtered_df.loc[(filtered_df['type_radius'] == 'Terran') | (filtered_df['type_radius'] == 'Superterran') |
                               (filtered_df['type_radius'] == 'Subterran')]
+
 print("Select values for earth planet")
 filtered_df.loc[len(filtered_df.index)] = ['Earth', 1, 1, 365, 'Terran']
 
